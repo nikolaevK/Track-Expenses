@@ -30,7 +30,11 @@ const Navbar = () => {
           />
         </Link>
         <Link href={"/summary"}>
-          <GoGraph className="nav-buttons" />
+          <GoGraph
+            className={`nav-buttons ${
+              router.pathname == "/addexpense" ? "text-orange1 opacity-80" : ""
+            }`}
+          />
         </Link>
       </ul>
     </section>
