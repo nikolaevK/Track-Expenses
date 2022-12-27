@@ -15,7 +15,7 @@ const Expenses = ({ expenses }: DocumentData) => {
       {expenses?.map((expense: DocumentData) => (
         <div
           key={expense.expenseId}
-          className="flex justify-between md:justify-start md:gap-[38%] lg:gap-[40%] xl:gap-[41%] items-center px-4 py-4 border-b border-gray1"
+          className="flex justify-between items-center px-4 py-4 border-b border-gray1"
         >
           <div className="flex items-center gap-2">
             <TiShoppingCart className="h-6 w-6 text-gray3" />
@@ -23,7 +23,7 @@ const Expenses = ({ expenses }: DocumentData) => {
               {expense?.description}
             </span>
           </div>
-          <div className="flex justify-center gap-20 md:w-full md:justify-between items-center">
+          <div className="flex justify-center gap-20 md:gap-[29vw] lg:gap-[32vw] xl:gap-[34vw] items-center">
             <span className="font-semibold">${expense?.amount}</span>
             <RiDeleteBin5Line
               onClick={() => removeExpense(expense.expenseId, expense.budgetId)}
