@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .nav-buttons {
+    @apply h-8 w-8 text-gray2 hover:text-orange1 opacity-80;
+  }
+
+  .overview-options {
+    @apply w-full h-[60px] bg-gray  rounded-sm mb-4;
+  }
+}
