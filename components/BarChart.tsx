@@ -88,7 +88,7 @@ const BarChart = ({ budgetInfo, expensesTotal }: Props) => {
                   backgroundColor: `${COLOR_ARRAY[index]}`,
                 }}
               ></div>
-              <span className="md:text-xl">{key}</span>
+              <span className="text-xs md:text-xl">{key}</span>
             </div>
           );
         })}
