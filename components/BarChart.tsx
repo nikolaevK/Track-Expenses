@@ -15,6 +15,20 @@ const COLOR_ARRAY = [
   "#567ffe",
   "#84e9c7",
   "#f380a2",
+  "#873e23",
+  "#ffc896",
+  "#71b4ff",
+  "#e28743",
+  "#567ffe",
+  "#84e9c7",
+  "#f380a2",
+  "#873e23",
+  "#ffc896",
+  "#71b4ff",
+  "#e28743",
+  "#567ffe",
+  "#84e9c7",
+  "#f380a2",
 ];
 
 const BarChart = ({ budgetInfo, expensesTotal }: Props) => {
