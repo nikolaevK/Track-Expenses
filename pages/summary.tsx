@@ -49,14 +49,14 @@ const summary = () => {
         <div className="md:flex md:justify-center md:items-center">
           <Chart budgetTotal={budgetTotal} expensesTotal={expensesTotal} />
         </div>
-        <div className="flex justify-between md:justify-center md:gap-[40%] items-center bg-gray w-full h-[120px] rounded-sm mt-10 px-10 shadow-lg">
-          <div className="flex flex-col gap-2">
+        <div className="flex justify-center gap-8 md:gap-[40%] items-center bg-gray w-full h-[120px] rounded-sm shadow-lg">
+          <div className="flex flex-col items-center md:items-start gap-2">
             <span className="text-gray3 font-semibold md:text-3xl">Spent</span>
             <span className="text-3xl md:text-4xl text-gray4">
               ${expensesTotal}
             </span>
           </div>
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col items-center md:items-start gap-2">
             <span className="text-gray3 md:text-3xl font-semibold">Budget</span>
             <span className="text-3xl md:text-4xl text-gray4">
               ${budgetTotal}

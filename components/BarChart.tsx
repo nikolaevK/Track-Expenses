@@ -10,25 +10,25 @@ interface Props {
 const COLOR_ARRAY = [
   "#873e23",
   "#ffc896",
-  "#71b4ff",
+  "#cdb4db",
   "#e28743",
   "#567ffe",
   "#84e9c7",
   "#f380a2",
-  "#873e23",
-  "#ffc896",
-  "#71b4ff",
-  "#e28743",
-  "#567ffe",
-  "#84e9c7",
-  "#f380a2",
-  "#873e23",
-  "#ffc896",
-  "#71b4ff",
-  "#e28743",
-  "#567ffe",
-  "#84e9c7",
-  "#f380a2",
+  "#264653",
+  "#2a9d8f",
+  "#8d99ae",
+  "#edf2f4",
+  "#023047",
+  "#b5838d",
+  "#ff006e",
+  "#bb3e03",
+  "#5e548e",
+  "#231942",
+  "#dde7c7",
+  "#a3c4f3",
+  "#fde2e4",
+  "#affc41",
 ];
 
 const BarChart = ({ budgetInfo, expensesTotal }: Props) => {
@@ -62,7 +62,7 @@ const BarChart = ({ budgetInfo, expensesTotal }: Props) => {
       <h1 className="font-semibold text-gray2 md:text-2xl">
         SPENDING BREAKDOWN
       </h1>
-      <div className="flex w-full bg-gray3 h-4 mt-6">
+      <div className="flex w-full relative bg-gray3 h-4 mt-6 ">
         {Object.keys(totalBudgetExpense)?.map((key, index) => {
           return (
             <div
@@ -73,22 +73,28 @@ const BarChart = ({ budgetInfo, expensesTotal }: Props) => {
                 )}%`,
                 backgroundColor: `${COLOR_ARRAY[index]}`,
               }}
-              className="h-full"
-            ></div>
+              className="h-full text-transparent cursor-pointer hover:text-gray2 font-semibold"
+            >
+              <p className="absolute h-4 w-full my-0 top-[-1.5rem] left-0 text-center">
+                ${totalBudgetExpense[key]} - {key}
+              </p>
+            </div>
           );
         })}
       </div>
-      <div className="w-full mt-6 grid grid-cols-3 gap-1">
+      <div className="w-full mt-6 grid grid-cols-2 md:grid-cols-3 gap-4">
         {Object.keys(totalBudgetExpense)?.map((key, index) => {
           return (
-            <div key={index} className="flex items-center gap-1 text-center">
+            <div key={index} className="flex items-center gap-1">
               <div
-                className="h-2 w-2 md:h-4 md:w-4 rounded-full"
+                className="h-3 w-3 md:h-4 md:w-4 rounded-full"
                 style={{
                   backgroundColor: `${COLOR_ARRAY[index]}`,
                 }}
-              ></div>
-              <span className="text-xs md:text-xl">{key}</span>
+              />
+              <p className="text-xs whitespace-nowrap md:whitespace-normal overflow-scroll md:overflow-visible md:text-xl">
+                {key}
+              </p>
             </div>
           );
         })}

@@ -28,6 +28,7 @@ module.exports = {
       red: "#ce427a",
       orange1: "#f8ba72",
       white: "#FFFFFF",
+      transparent: "transparent",
     },
   },
   plugins: [],
