@@ -2,9 +2,12 @@
 > A simple and easy to use personal finance app that allows to monitor and categorize your expenses.
 > Live demo [moonlit-churros-cd4eff.netlify.app](https://moonlit-churros-cd4eff.netlify.app/)
 
+![Algorithm schema](./budget_app.png)
+
 ## General Information
-- Serverless full stack application which uses firebase cloud functions to store and protect data. User is able to use his or her gmail account to login and to start using the app in any browser they prefer. 
-- This app provides simmple and effective interface to store, group, track and analyze user's expenses. 
+- Serverless full stack application which uses firebase cloud functions to store and protect data. User is able to use his or her gmail account to login and to start using the app in any browser he or she prefers. 
+- This app provides simple and effective interface to store, group, track and analyze your expenses.
+- This app is built and designed with a mobile first approach hence, I recommend to use it in a smartphone browsers.  
 
 ## Technologies Used
 <div>
@@ -14,25 +17,13 @@
   <img src="https://github.com/devicons/devicon/blob/master/icons/firebase/firebase-plain-wordmark.svg" title="Firebase" alt="Firebase" width="40" height="40"/>&nbsp;
 </div>
 
+## Acknowledgements
+- Design by Pham Huy: https://dribbble.com/pnhathuy09
+- Design is on https://dribbble.com/shots/11895982-Budget-and-Expense-Manager-App
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# Next.js + Tailwind CSS Example
+# Setup
+## Next.js + Tailwind CSS Example
 
 This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v3.2)](https://tailwindcss.com/blog/tailwindcss-v3-2) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
 
