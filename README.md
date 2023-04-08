@@ -1,3 +1,25 @@
+# Expense Tracker
+> A simple and easy to use personal finance app that allows to monitor and categorize your expenses.
+> Live demo [_here_](moonlit-churros-cd4eff.netlify.app). <!-- If you have the project hosted somewhere, include the link here. -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Next.js + Tailwind CSS Example
 
 This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v3.2)](https://tailwindcss.com/blog/tailwindcss-v3-2) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
