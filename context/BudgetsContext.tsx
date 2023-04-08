@@ -86,8 +86,7 @@ export function BudgetsProvider({ children }: BudgetsProviderProps) {
       const ref = collection(db, "users", userUid, "budgets");
       const q = query(ref);
       const querySnap = (await getDocs(q)).docs.map((doc) => doc.data());
-      // console.log(querySnap); // Need to map through array of budgets and for one particular, add Collection Expenses
-      // render all budgets and inside each of them add expense and pass the id of budget to connect expense
+
       if (querySnap) {
         return querySnap;
       }
@@ -99,7 +98,6 @@ export function BudgetsProvider({ children }: BudgetsProviderProps) {
       const ref = collectionGroup(db, "expenses");
       const q = query(ref, where("userId", "==", userUid)); // where budgetId == budgetId
       const querySnap = (await getDocs(q)).docs.map((doc) => doc.data());
-      // console.log(querySnap);
 
       if (querySnap) {
         return querySnap;

@@ -25,7 +25,7 @@ const Expenses = ({ expenses }: DocumentData) => {
               {expense?.description}
             </span>
           </div>
-          <div className="flex justify-center gap-2 md:gap-[29vw] lg:gap-[32vw] xl:gap-[34vw] items-center">
+          <div className="flex justify-center gap-2 md:gap-8 items-center">
             <span className="font-semibold">${expense?.amount}</span>
             <RiDeleteBin5Line
               onClick={() => removeExpense(expense.expenseId, expense.budgetId)}

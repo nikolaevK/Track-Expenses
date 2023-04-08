@@ -52,23 +52,25 @@ const BudgetSlide = ({ budget }: DocumentData) => {
         onClick={() => setOpen(!open)}
         className="flex whitespace-nowrap md:whitespace-normal overflow-scroll md:overflow-visible justify-between px-4 items-center text-gray3 font-semibold overview-options shadow-md md:hover:scale-105 md:transition-transform md:cursor-pointer"
       >
-        <div className="flex ">
+        <div className="flex">
           <div>
             <TbReportMoney className="h-6 w-6" />
           </div>
           <div className="mx-2">{budget.budgetName}</div>
         </div>
-        {expenses && (
-          <span className="text-gray4">
-            ${totalExpenses(expenses)} /{" "}
-            <span className="text-gray3">${budget.max}</span>
-          </span>
-        )}
-        <div
-          className="mr-2 ml-2"
-          onClick={() => deleteBudget(budget?.budgetId)}
-        >
-          <RiDeleteBin5Line className="text-orange1 md:hover:scale-110 md:transition-transform md:cursor-pointer" />
+        <div className="flex justify-center items-center">
+          {expenses && (
+            <span className="text-gray4">
+              ${totalExpenses(expenses)} /{" "}
+              <span className="text-gray3">${budget.max}</span>
+            </span>
+          )}
+          <div
+            className="mr-2 ml-2 md:ml-8"
+            onClick={() => deleteBudget(budget?.budgetId)}
+          >
+            <RiDeleteBin5Line className="text-orange1 md:hover:scale-110 md:transition-transform md:cursor-pointer" />
+          </div>
         </div>
       </div>
       {open && (
