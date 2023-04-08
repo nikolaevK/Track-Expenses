@@ -1,6 +1,18 @@
 # Expense Tracker
 > A simple and easy to use personal finance app that allows to monitor and categorize your expenses.
-> Live demo [_here_]([moonlit-churros-cd4eff.netlify.app](https://moonlit-churros-cd4eff.netlify.app/)). <!-- If you have the project hosted somewhere, include the link here. -->
+> Live demo [moonlit-churros-cd4eff.netlify.app](https://moonlit-churros-cd4eff.netlify.app/)
+
+## General Information
+- Serverless full stack application which uses firebase cloud functions to store and protect data. User is able to use his or her gmail account to login and to start using the app in any browser they prefer. 
+- This app provides simmple and effective interface to store, group, track and analyze user's expenses. 
+
+## Technologies Used
+<div>
+  <img src="https://github.com/devicons/devicon/blob/master/icons/react/react-original-wordmark.svg" title="React" alt="React" width="40" height="40"/>&nbsp;
+  <img src="https://github.com/devicons/devicon/blob/master/icons/nextjs/nextjs-original-wordmark.svg" title="NextJs" alt="NextJs" width="40" height="40" style="background-color:white; padding:20px;"/>&nbsp;
+    <img src="https://github.com/devicons/devicon/blob/master/icons/typescript/typescript-original.svg" title="TypeScript" alt="TypeScript" width="40" height="40"/>&nbsp;
+  <img src="https://github.com/devicons/devicon/blob/master/icons/firebase/firebase-plain-wordmark.svg" title="Firebase" alt="Firebase" width="40" height="40"/>&nbsp;
+</div>
 
 
 
