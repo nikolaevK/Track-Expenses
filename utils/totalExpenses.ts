@@ -8,7 +8,7 @@ export function totalExpenses(expenses: DocumentData[]) {
     });
   }
 
-  return total;
+  return Math.round(total);
 }
 
 export function totalBudget(budgets: DocumentData[]) {
@@ -17,7 +17,7 @@ export function totalBudget(budgets: DocumentData[]) {
     budgets.forEach((budget) => (total += budget.max));
   }
 
-  return total;
+  return Math.round(total);
 }
 
 export function calcPercent(expenses: DocumentData[], budgets: DocumentData[]) {
