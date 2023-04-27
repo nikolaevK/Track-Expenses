@@ -5,6 +5,7 @@ import {
   doc,
   DocumentData,
   getDocs,
+  orderBy,
   query,
   serverTimestamp,
   setDoc,
@@ -96,7 +97,11 @@ export function BudgetsProvider({ children }: BudgetsProviderProps) {
   async function getExpenses() {
     if (userUid) {
       const ref = collectionGroup(db, "expenses");
-      const q = query(ref, where("userId", "==", userUid)); // where budgetId == budgetId
+      const q = query(
+        ref,
+        where("userId", "==", userUid),
+        orderBy("createdAt", "asc")
+      ); // where budgetId == budgetId
       const querySnap = (await getDocs(q)).docs.map((doc) => doc.data());
 
       if (querySnap) {
@@ -105,6 +110,7 @@ export function BudgetsProvider({ children }: BudgetsProviderProps) {
     }
   }
 
+  // CHECK WHERE THEY USED!!!
   async function getBudgetExpenses(budgetId: string) {
     if (userUid) {
       const ref = collection(
@@ -115,7 +121,7 @@ export function BudgetsProvider({ children }: BudgetsProviderProps) {
         budgetId,
         "expenses"
       );
-      const q = query(ref);
+      const q = query(ref, orderBy("createdAt", "asc"));
       const querySnap = (await getDocs(q)).docs.map((doc) => doc.data());
 
       if (querySnap) {

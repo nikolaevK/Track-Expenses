@@ -2,6 +2,7 @@ import {
   collection,
   DocumentData,
   onSnapshot,
+  orderBy,
   query,
 } from "firebase/firestore";
 import { useContext, useEffect, useState } from "react";
@@ -31,7 +32,7 @@ const BudgetSlide = ({ budget }: DocumentData) => {
         budget.budgetId,
         "expenses"
       );
-      const q = query(ref);
+      const q = query(ref, orderBy("createdAt", "desc"));
 
       unsubscribe = onSnapshot(q, (snapshot) => {
         const expenseArr: DocumentData[] = [];

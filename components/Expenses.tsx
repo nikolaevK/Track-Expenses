@@ -6,6 +6,10 @@ import { useBudgets } from "../context/BudgetsContext";
 const Expenses = ({ expenses }: DocumentData) => {
   const { deleteExpense } = useBudgets();
 
+  function formatTime(seconds: number, nanoseconds: number) {
+    return new Date(seconds * 1000 + nanoseconds / 1000000);
+  }
+
   function removeExpense(expenseId: string, budgetId: string) {
     deleteExpense({ expenseId, budgetId });
   }
@@ -31,6 +35,12 @@ const Expenses = ({ expenses }: DocumentData) => {
               onClick={() => removeExpense(expense.expenseId, expense.budgetId)}
               className="text-orange1 md:hover:scale-110 md:transition-transform md:cursor-pointer"
             />
+          </div>
+          <div className="hidden md:inline-block absolute left-[50%] text-gray3 cursor-pointer">
+            {formatTime(
+              expense.createdAt.seconds,
+              expense.createdAt.nanoseconds
+            ).toDateString()}
           </div>
         </div>
       ))}
